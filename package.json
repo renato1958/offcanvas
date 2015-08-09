@@ -1,0 +1,27 @@
+{
+  "name": "offcanvas",
+  "version": "1.0.0",
+  "description": "Esempio di navigazione off-canvas",
+  "main": "index.html",
+  "scripts": {
+    "test": "''"
+  },
+  "repository": {
+    "type": "git",
+    "url": "''"
+  },
+  "keywords": [
+    "offcanvas",
+    "responsive",
+    "web",
+    "design",
+    "css"
+  ],
+  "author": "Renato Felisi",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  }
+}
