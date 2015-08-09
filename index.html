@@ -3,14 +3,83 @@
   <head>
   	<meta charset="utf-8">
   	<title>Menu off-canvas</title>
+
   	<script src="assets/js/vendor/jquery.js"></script>
+
+  	<style>
+  	  * {
+  	  	box-sizing: border-box;
+  	  }
+
+  	  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  	  	margin: 0;
+  	  	padding: 0;
+  	  }
+
+  	  ol, ul {
+  	  	list-style-type: none;
+  	  }
+
+  	  .clearfix:before, .clearfix:after {
+  	  	content: ' ';
+  	  	display: table;
+  	  }
+
+  	  .clearfix:after {
+  	  	clear: both;
+  	  }
+
+  	  body {
+  	  	font-size: 1rem;
+  	  	font-family: helvetica, verdana, arial, sans-serif;
+  	  	font-weight: normal;
+  	  	font-style: normal;
+  	  	background-color: #fff;
+  	  	color: #555;
+  	  }
+
+  	  .outer-wrapper {
+  	  	width: 100%;
+  	  	position: relative;
+  	  	overflow: hidden;
+  	  }
+
+  	  .inner-wrapper {
+  	  	width: 100%;
+  	  	position: relative;
+  	  }
+
+  	  .block {
+  	  	position: relative;
+  	  }
+
+  	  .main-header {
+  	  	height: 3rem;
+  	  	background-color: red;
+  	  	color: white;
+  	  	line-height: 3rem;
+  	  }
+
+  	  .main-title {
+  	  	font-size: 1.6rem;
+  	  	float: right;
+  	  	margin-right: 5%;
+  	  	text-transform: uppercase;
+  	  }
+
+  	  .toggle-menu {
+  	  	font-size: 2.25rem;
+  	  	padding: 0 5%;
+  	  	cursor: pointer;
+  	  }
+  	</style>
   </head>
 
   <body>
   	<div class="outer-wrapper">
   		<div class="inner-wrapper">
   			<header class="main-header" role="banner">
-  				<div class="block">
+  				<div class="block clearfix">
   					<h1 class="main-title">off-canvas menu</h1>
   					<a class="toggle-menu">&equiv;</a>
   				</div><!-- .block -->
@@ -18,10 +87,10 @@
   			<nav class="main-nav" role="navigation">
   				<ul class="list">
   					<li><a href="#">Item 1</a></li>
-  					<li><a href="#">Item 1</a></li>
-  					<li><a href="#">Item 1</a></li>
-  					<li><a href="#">Item 1</a></li>
-  					<li><a href="#">Item 1</a></li>
+  					<li><a href="#">Item 2</a></li>
+  					<li><a href="#">Item 3</a></li>
+  					<li><a href="#">Item 4</a></li>
+  					<li><a href="#">Item 5</a></li>
   				</ul>
   			</nav>
   			<main class="main-content">
