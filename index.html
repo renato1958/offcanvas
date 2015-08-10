@@ -47,6 +47,7 @@
   	  .inner-wrapper {
   	  	width: 100%;
   	  	position: relative;
+		transition: transform .8s ease;
   	  }
 
   	  .block {
@@ -72,6 +73,39 @@
   	  	padding: 0 5%;
   	  	cursor: pointer;
   	  }
+	  
+	  .main-nav {
+	    width: 15.625rem;
+		display: block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -15.625rem;
+	  }
+	  
+	  .list {
+	    display: block;
+	  }
+	  
+	  .list > li {
+	    display: block;
+	  }
+	  
+	  .list a {
+	    display: block;
+	    font-size: .875rem;
+		font-weight: bold;
+		color: white;
+		text-decoration: none;
+		background-color: rgba(100, 100, 100, .7);
+		border-bottom: 1px solid #222;
+		padding: 10px 15px;
+	  }
+	  
+	  .is-open {
+	    transform: translate3d(15.625rem, 0, 0);
+	  }
+	  
   	</style>
   </head>
 
@@ -104,5 +138,12 @@
   			</main>
   		</div><!-- .inner-wrapper -->
   	</div><!-- .outer-wrapper -->
+	
+	<script>
+	  $('.toggle-menu').on('click', function(e) {
+	    e.preventDefault();
+		$('.inner-wrapper').toggleClass('is-open');
+	  })
+	</script>
   </body>
 </html>
