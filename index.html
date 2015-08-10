@@ -3,6 +3,7 @@
   <head>
   	<meta charset="utf-8">
   	<title>Menu off-canvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
   	<script src="assets/js/vendor/jquery.js"></script>
 
@@ -31,6 +32,7 @@
 
   	  body {
   	  	font-size: 1rem;
+        line-height: 1.5rem;
   	  	font-family: helvetica, verdana, arial, sans-serif;
   	  	font-weight: normal;
   	  	font-style: normal;
@@ -47,7 +49,8 @@
   	  .inner-wrapper {
   	  	width: 100%;
   	  	position: relative;
-		transition: transform .8s ease;
+		    transition: transform .8s ease;
+        -webkit-transition: -webkit-transform .8s ease;
   	  }
 
   	  .block {
@@ -62,25 +65,26 @@
   	  }
 
   	  .main-title {
-  	  	font-size: 1.6rem;
+  	  	font-size: 1.4rem;
   	  	float: right;
-  	  	margin-right: 5%;
+  	  	margin-right: 15px;
   	  	text-transform: uppercase;
   	  }
 
   	  .toggle-menu {
   	  	font-size: 2.25rem;
-  	  	padding: 0 5%;
+  	  	padding: 0 15px;
   	  	cursor: pointer;
   	  }
 	  
 	  .main-nav {
 	    width: 15.625rem;
-		display: block;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: -15.625rem;
+  		display: block;
+  		height: 98%;
+  		position: absolute;
+  		top: 0;
+  		left: -15.625rem;
+      background-color: rgba(100, 100, 100, .7);
 	  }
 	  
 	  .list {
@@ -94,17 +98,39 @@
 	  .list a {
 	    display: block;
 	    font-size: .875rem;
-		font-weight: bold;
-		color: white;
-		text-decoration: none;
-		background-color: rgba(100, 100, 100, .7);
-		border-bottom: 1px solid #222;
-		padding: 10px 15px;
+  		font-weight: bold;
+  		color: white;
+  		text-decoration: none;
+  		border-bottom: 1px solid #222;
+  		padding: 10px 15px;
 	  }
 	  
 	  .is-open {
 	    transform: translate3d(15.625rem, 0, 0);
+      -webkit-transform: translate3d(15.625rem, 0, 0);
 	  }
+
+    .is-open .main-nav {
+      box-shadow: 3px 5px 5px #555;    
+    }
+
+    .main-content {
+      padding: 1.5em 15px;
+    }
+
+    .article-title {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #789;
+      border-bottom: 1px dashed #789;
+      margin-bottom: 1.5rem;
+    }
+
+    article p {
+      margin-bottom: 1.75rem;
+      text-align: justify;
+    }
 	  
   	</style>
   </head>
@@ -120,6 +146,7 @@
   			</header>
   			<nav class="main-nav" role="navigation">
   				<ul class="list">
+            <li class="search"><input type="search" name="search"></li>
   					<li><a href="#">Item 1</a></li>
   					<li><a href="#">Item 2</a></li>
   					<li><a href="#">Item 3</a></li>
