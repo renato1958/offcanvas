@@ -102,7 +102,7 @@
   		color: white;
   		text-decoration: none;
   		border-bottom: 1px solid #222;
-  		padding: 10px 15px;
+  		padding: 10px 25px;
 	  }
 	  
 	  .is-open {
@@ -112,6 +112,16 @@
 
     .is-open .main-nav {
       box-shadow: 3px 5px 5px #555;    
+    }
+
+    .search {
+      height: 3rem;
+      line-height: 3rem;border-bottom: 1px solid #222;
+      padding: 0 25px;
+    }
+
+    .search input[type="search"] {
+      width: 90%;
     }
 
     .main-content {
@@ -146,7 +156,7 @@
   			</header>
   			<nav class="main-nav" role="navigation">
   				<ul class="list">
-            <li class="search"><input type="search" name="search"></li>
+            <li class="search"><input type="search" name="search" placeholder="Cerca..."></li>
   					<li><a href="#">Item 1</a></li>
   					<li><a href="#">Item 2</a></li>
   					<li><a href="#">Item 3</a></li>
