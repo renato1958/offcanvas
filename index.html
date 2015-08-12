@@ -116,7 +116,8 @@
 
     .search {
       height: 3rem;
-      line-height: 3rem;border-bottom: 1px solid #222;
+      line-height: 3rem;
+	  border-bottom: 1px solid #222;
       padding: 0 25px;
     }
 
@@ -141,7 +142,40 @@
       margin-bottom: 1.75rem;
       text-align: justify;
     }
+	
+	@media only screen and (min-width: 43rem) {
+	  .main-title {
+	    float: none;
+		text-align: center;
+	  }
 	  
+	  .toggle-menu {
+	    float: none;
+	    display: none;
+	  }
+	  
+	  .main-nav {
+	    position: static;
+		width: 100%;
+	  }
+	  
+	  .list li, .list li a {
+	    display: inline-block;
+		border-bottom: none;
+	  }
+	  
+	  .list li a {
+	    display: inline-block;
+		border-right: 1px solid #222;	  
+	  }
+	  
+	  .search {
+	    float: right;
+		height: 2.75rem;
+		line-height: 2.75rem;
+		padding-right: 15px;
+	  }
+	}
   	</style>
   </head>
 
