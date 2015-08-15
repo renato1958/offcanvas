@@ -141,6 +141,58 @@
       margin-bottom: 1.75rem;
       text-align: justify;
     }
+
+    @media only screen and (min-width: 37.5625rem) {
+      .toggle-menu {
+        display: none;
+      }
+
+      .main-header {
+        height: 4rem;
+        line-height: 4rem;
+      }
+
+      .main-title {
+        float: none;
+        text-align: center;
+      }
+
+      .main-nav {
+        position: static;
+        width: 100%;
+      }
+
+      .main-nav li {
+        display: inline-block;
+        padding: 10px 0;
+      }
+
+      .main-nav li a, .search {
+        border-bottom: none;
+      }
+
+      .main-nav li a {
+        display: inline-block;
+        padding: 0 25px;
+        border-right: 1px solid #222;
+      }
+
+      .main-nav li:last-child a {
+        border-right: none;
+      }
+
+      .search {
+        float: right;
+        height: 1.5rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    @media only screen and (max-width: 38.75rem) {
+      .main-nav li a {
+        padding: 0 20px;
+      }
+    }
 	  
   	</style>
   </head>
