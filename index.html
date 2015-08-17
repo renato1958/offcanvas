@@ -229,11 +229,19 @@
   		</div><!-- .inner-wrapper -->
   	</div><!-- .outer-wrapper -->
 	
+	<script src="assets/js/vendor/hammer.js"></script>
+	<script src="assets/js/vendor/jquery.hammer.js"></script>	
+	
 	<script>
 	  $('.toggle-menu').on('click', function(e) {
 	    e.preventDefault();
 		$('.inner-wrapper').toggleClass('is-open');
-	  })
+	  });
+	  
+	  $('.main-nav').hammer().on('swipeleft', function(e) {
+	    e.preventDefault();
+		$('.inner-wrapper').toggleClass('is-open');
+	  });
 	</script>
   </body>
 </html>
